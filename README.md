@@ -16,6 +16,14 @@ Technologies used in this project:
   <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/86aece1b-acbd-4cf8-9d84-44082a5761b3">
 </p>
 
+## Tạo API Document với Scramble
+
+Scramble là trình tạo tài liệu OpenAPI (Swagger) cho Laravel. Nó tự động tạo tài liệu API cho dự án của bạn mà không yêu cầu bạn phải viết chú thích PHPDoc theo cách thủ công.
+
+<p align="center">
+  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/71349e2e-dcc0-41a0-a0bb-36b3add84110">
+</p>
+
 ## List features of projects and screenshots
 
 #### Task Creation
