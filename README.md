@@ -27,9 +27,15 @@ Scramble là trình tạo tài liệu OpenAPI (Swagger) cho Laravel. Nó tự đ
 ## List features of projects and screenshots
 
 #### Task Creation
+
+##### Login and Register:
+<p align="center">
+  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/1bd9388d-5767-41cc-997d-a024cb8504e7">
+</p>
+
 ##### Users can add tasks:
 <p align="center">
-  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/65f3bdf9-2ae1-48b8-ba0a-ed87b9c0b521">
+  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/17681ce7-310c-4d43-afdf-b01d6de03a1d">
 </p>
 
 ##### Edit:
