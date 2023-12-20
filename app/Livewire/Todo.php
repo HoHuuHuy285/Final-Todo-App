@@ -13,6 +13,7 @@ class Todo extends Component
 
     protected $repo;
 
+
     #[Rule('required|min:3')]
 
     public $todo = '';

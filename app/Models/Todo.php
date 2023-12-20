@@ -20,5 +20,6 @@ class Todo extends Model
         'id',
         'todo',
         'user_id',
+        'is_completed'
     ];
 }
