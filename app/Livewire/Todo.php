@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Category;
 use App\Repo\TodoRepo;
 use Livewire\Component;
 use Livewire\Attributes\Rule;
@@ -23,7 +24,14 @@ class Todo extends Component
     #[Rule('required|min:3')]
     public $editedTodo;
 
+    public $selectedCategory;
+    public $categories;
 
+    public function mount()
+    {
+        // Load danh sách danh mục từ cơ sở dữ liệu
+        $this->categories = Category::pluck('name', 'id')->toArray();
+    }
 
     public function boot(TodoRepo $repo)
     {

@@ -4,9 +4,10 @@
     <x-input-error :messages="$errors->get('todo')" class="mt-2"/>
     </div>
 
-    <form class="flex" method="POST" wire:submit.prevent='addTodo'> 
-    <x-text-input wire:model='todo' class="w-full mr-2"/>
+    <form class="flex" method="POST" wire:submit.prevent='addTodo'>
 
+    <x-text-input wire:model='todo' class="w-full mr-2"/>
+    <livewire:dropdown :options="$categories" wire:model="selectedCategory"/>
     <x-primary-button>
         Add
     </x-primary-button>
