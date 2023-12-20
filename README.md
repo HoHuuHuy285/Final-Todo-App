@@ -21,7 +21,7 @@ Technologies used in this project:
 Scramble là trình tạo tài liệu OpenAPI (Swagger) cho Laravel. Nó tự động tạo tài liệu API cho dự án của bạn mà không yêu cầu bạn phải viết chú thích PHPDoc theo cách thủ công.
 
 <p align="center">
-  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/71349e2e-dcc0-41a0-a0bb-36b3add84110">
+  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/94cb737f-4eff-4144-b45a-32620e5fe5d8">
 </p>
 
 ## List features of projects and screenshots
