@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::prefix('v1')->group(function () {
-    Route::apiResource('users', \App\Http\Controllers\API\UserController::class);
+    Route::apiResource('categories', \App\Http\Controllers\API\CategoryController::class);
     Route::apiResource('todos', \App\Http\Controllers\API\TodoController::class);
 });

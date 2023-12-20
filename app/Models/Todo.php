@@ -16,10 +16,15 @@ class Todo extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
     protected $fillable = [
         'id',
         'todo',
         'user_id',
-        'is_completed'
+        'is_completed',
+        'category_id'
     ];
 }
