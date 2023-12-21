@@ -21,10 +21,26 @@ Technologies used in this project:
 Scramble là trình tạo tài liệu OpenAPI (Swagger) cho Laravel. Nó tự động tạo tài liệu API cho dự án của bạn mà không yêu cầu bạn phải viết chú thích PHPDoc theo cách thủ công.
 
 <p align="center">
-  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/71349e2e-dcc0-41a0-a0bb-36b3add84110">
+  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/94cb737f-4eff-4144-b45a-32620e5fe5d8">
 </p>
 
 ## List features of projects and screenshots
+
+#### Telescope
+
+Laravel Telescope makes a wonderful companion to your local Laravel development environment. Telescope provides insight into the requests coming into your application, exceptions, log entries, database queries, queued jobs, mail, notifications, cache operations, scheduled tasks, variable dumps, and more.
+
+<p align="center">
+  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/940892fa-b7b1-4b97-a2d7-b32fed0a7cba">
+</p>
+
+#### Laravel Pulse
+
+Laravel Pulse delivers at-a-glance insights into your application's performance and usage. With Pulse, you can track down bottlenecks like slow jobs and endpoints, find your most active users, and more.
+
+<p align="center">
+  <img src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/3e43da71-2fb8-433b-9941-388c1a2ccf55">
+</p>
 
 #### Task Creation
 
