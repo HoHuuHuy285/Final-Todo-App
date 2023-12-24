@@ -3,9 +3,9 @@
 # A simple TODO list app built with Laravel Livewire.
 ## DEMO
 
-<video align="center" controls>
-  <source src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/854994d7-6894-4873-8ba1-92b0875ace2c" type="video/mp4">
-</video>
+https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/56da2edd-9ec3-49e3-8e11-c6192ff7d2fd
+
+
 ## Tech
 
 Technologies used in this project:
