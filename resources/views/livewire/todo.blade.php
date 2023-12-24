@@ -1,7 +1,4 @@
 <div>
-    <div class="flex justify-center">
-        <x-input-error :messages="$errors->get('todo')" class="mt-2"/>
-    </div>
     <form class="flex" method="POST" wire:submit.prevent='addTodo'> 
         <x-text-input wire:model='search' placeholder='Search' class="w-full mr-2"/> <!-- Added search input -->
     </form>
