@@ -1,55 +1,53 @@
 <div>
     <div class="flex justify-center">
-
-    <x-input-error :messages="$errors->get('todo')" class="mt-2"/>
+        <x-input-error :messages="$errors->get('todo')" class="mt-2"/>
     </div>
 
     <form class="flex" method="POST" wire:submit.prevent='addTodo'> 
-    <x-text-input wire:model='todo' class="w-full mr-2"/>
+        <x-text-input wire:model='todo' class="w-full mr-2"/>
+        
+        <select wire:model="category_id"  class="dark:bg-gray-800 dark:border-gray-700 dark:text-white light:bg-gray-200 light:border-gray-300 light:text-black"
+        > <!-- Added select for categories -->
+            <option value="">Select Category</option>
+            @foreach($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+        </select>
 
-    <x-primary-button>
-        Add
-    </x-primary-button>
+        <x-primary-button>
+            Add
+        </x-primary-button>
     </form>
     <br>
-    @forelse ( $todos as $todo )
-        {{-- Fist todo --}}
-    <div class="flex mt-5 py-4 justify-center justify-between">
-    <div>
-    <input id="green-checkbox" wire:click='markCompleted({{  $todo->id }})' @if($todo->is_completed) checked @endif type="checkbox" class="w-4 h-4 text-green-600 bg-gray-100 rounded focus:ring-green-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-    </div>
-    <div>
-    @if ($edit == $todo->id)
-    <x-text-input wire:model='editedTodo' class="w-full mr-2"/>
-    @else
-    <span @if ($todo->is_completed ) class='text-green-600' @endif> {{ $todo->todo }}</span>
-    @endif
-    </div>
-    
-    <div>
-    @if ($edit == $todo->id)
-    <x-secondary-button wire:click='updateTodo({{  $todo->id  }})'>
-    Update
-    </x-secondary-button>
-    <x-danger-button wire:click='cancelEdit'>
-    Cancel
-    </x-danger-button>
-    @else
-    <x-secondary-button wire:click='editTodo({{  $todo->id  }})'>
-    Edit
-    </x-secondary-button >
-    <x-danger-button wire:click='deleteTodo({{  $todo->id  }})'>
-    Delete
-    </x-danger-button>
-    @endif
-    </div>
-    
-    </div>
+
+    @forelse ($todos as $todo)
+        <div class="flex mt-5 py-4 justify-center justify-between">
+            <div>
+                <input id="green-checkbox" wire:click='markCompleted({{ $todo->id }})' @if($todo->is_completed) checked @endif type="checkbox" class="w-4 h-4 text-green-600 bg-gray-100 rounded focus:ring-green-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            </div>
+            <div>
+                @if ($edit == $todo->id)
+                    <x-text-input wire:model='editedTodo' class="w-full mr-2"/>
+                @else
+                    <span @if ($todo->is_completed) class='text-green-600' @endif>{{ $todo->todo }}</span>
+                    <br>
+                    <span @if ($todo->is_completed) class='text-green-600' @endif >Category: {{ $todo->category ? $todo->category->name : 'Uncategorized' }}</span>
+                @endif
+            </div>
+            <div>
+                @if ($edit == $todo->id)
+                    <x-secondary-button wire:click='updateTodo({{ $todo->id }})'>Update</x-secondary-button>
+                    <x-danger-button wire:click='cancelEdit'>Cancel</x-danger-button>
+                @else
+                    <x-secondary-button wire:click='editTodo({{ $todo->id }})'>Edit</x-secondary-button>
+                    <x-danger-button wire:click='deleteTodo({{ $todo->id }})'>Delete</x-danger-button>
+                @endif
+            </div>
+        </div>
     @empty  
     @endforelse
 
     <div class="mt-5">
-    {{$todos -> links()}}
+        {{ $todos->links() }}
     </div>
-
 </div>

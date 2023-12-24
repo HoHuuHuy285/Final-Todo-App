@@ -6,6 +6,7 @@ use App\Repo\TodoRepo;
 use Livewire\Component;
 use Livewire\Attributes\Rule;
 use Livewire\WithPagination;
+use App\Models\Category;
 
 class Todo extends Component
 {
@@ -24,11 +25,12 @@ class Todo extends Component
     #[Rule('required|min:3')]
     public $editedTodo;
 
-
+    public $categories;
 
     public function boot(TodoRepo $repo)
     {
         $this->repo = $repo;
+        $this->categories = Category::all(); // Fetch all categories
     }
 
     public function addTodo()
