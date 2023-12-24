@@ -6,6 +6,9 @@ namespace App\Repo;
 
 class TodoRepo
 {
+
+    public $search = '';
+
     public function save($data)
     {
         $createTodo = auth()->user()->todos()->create($data);
@@ -22,11 +25,27 @@ class TodoRepo
 
     public function fetchAll()
     {
-        $todos = auth()->user()->todos()->latest()->paginate(3);
+        $query = auth()->user()->todos()->latest();
+
+        // Add search functionality
+        if ($this->search) {
+            $query->where('todo', 'like', '%' . $this->search . '%');
+        }
+
+        $todos = $query->paginate(3);
+
         return $todos;
     }
 
+    public function search($search)
+    {
+        $todos = auth()->user()->todos()
+            ->where('todo', 'like', '%' . $search . '%')
+            ->latest()
+            ->paginate(3);
 
+        return $todos;
+    }
     public function update($todoId, $editedTodo)
     {
         $todo = $this->getTodo($todoId);

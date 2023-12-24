@@ -26,6 +26,7 @@ class Todo extends Component
     public $editedTodo;
 
     public $categories;
+    public $search = '';
 
     public function boot(TodoRepo $repo)
     {
@@ -70,10 +71,13 @@ class Todo extends Component
         return $this->repo->completed($todoId);
     }
 
+    public function updatingSearch()
+    {
+        $this->resetPage(); // Reset pagination when the search query changes
+    }
     public function render()
     {
-
-        $todos = $this->repo->fetchAll();
+        $todos = $this->repo->search($this->search); // Call a method in TodoRepo to perform the search
         return view('livewire.todo', compact('todos'));
     }
 }

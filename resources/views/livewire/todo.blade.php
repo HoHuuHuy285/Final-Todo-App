@@ -5,9 +5,9 @@
 
     <form class="flex" method="POST" wire:submit.prevent='addTodo'> 
         <x-text-input wire:model='todo' class="w-full mr-2"/>
+        <x-text-input wire:model='search' placeholder='Search' class="w-full mr-2"/> <!-- Added search input -->
         
-        <select wire:model="category_id"  class="dark:bg-gray-800 dark:border-gray-700 dark:text-white light:bg-gray-200 light:border-gray-300 light:text-black"
-        > <!-- Added select for categories -->
+        <select wire:model="category_id">
             <option value="">Select Category</option>
             @foreach($categories as $category)
                 <option value="{{ $category->id }}">{{ $category->name }}</option>
