@@ -1,7 +1,11 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 # A simple TODO list app built with Laravel Livewire.
+## DEMO
 
+<video align="center" controls>
+  <source src="https://github.com/HoHuuHuy285/Final-Todo-App/assets/118819624/854994d7-6894-4873-8ba1-92b0875ace2c" type="video/mp4">
+</video>
 ## Tech
 
 Technologies used in this project:
