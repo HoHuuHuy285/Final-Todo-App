@@ -6,7 +6,6 @@ use App\Repo\TodoRepo;
 use Livewire\Component;
 use Livewire\Attributes\Rule;
 use Livewire\WithPagination;
-use App\Models\Category;
 
 class Todo extends Component
 {
@@ -25,13 +24,11 @@ class Todo extends Component
     #[Rule('required|min:3')]
     public $editedTodo;
 
-    public $categories;
-    public $search = '';
+
 
     public function boot(TodoRepo $repo)
     {
         $this->repo = $repo;
-        $this->categories = Category::all(); // Fetch all categories
     }
 
     public function addTodo()
@@ -71,13 +68,10 @@ class Todo extends Component
         return $this->repo->completed($todoId);
     }
 
-    public function updatingSearch()
-    {
-        $this->resetPage(); // Reset pagination when the search query changes
-    }
     public function render()
     {
-        $todos = $this->repo->search($this->search); // Call a method in TodoRepo to perform the search
+
+        $todos = $this->repo->fetchAll();
         return view('livewire.todo', compact('todos'));
     }
 }
